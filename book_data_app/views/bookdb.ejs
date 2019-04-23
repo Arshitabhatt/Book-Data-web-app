@@ -1,0 +1,17 @@
+<h1>Result Page</h1>
+<ul>
+<% data["items"].forEach(function(book)  {%>
+<li><strong><%= book["volumeInfo"]["title"]%></strong></li>
+<ol>
+    <li><strong><em>Author-<%= book["volumeInfo"]["authors"] %></em></strong></li>
+    <li>Publishing Date-<%= book["volumeInfo"]["publishedDate"] %></li>   
+    <li>Publisher-<%= book["volumeInfo"]["publisher"] %></li> 
+    <li><em><u>Genre-<%= book["volumeInfo"]["categories"] %></u></em></li>
+    <li>Description-<%= book["volumeInfo"]["description"] %></li>
+    <li>Preview-<%= book["volumeInfo"]["previewLink"] %></li>
+    <li>Image- <img src = "<%= book["volumeInfo"]["imageLinks"]["thumbnail"]%>>"></li>
+    
+</ol>
+<% });%>
+</ul>
+<a href = "/">Search again</a>
